@@ -1,0 +1,44 @@
+{
+  "name": "codinggame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rhy0u/codinggame.git",
+  "scripts": {
+    "db:seed": "yarn knex seed:run",
+    "db:migrate:make": "yarn knex migrate:make",
+    "db:migrate": "yarn knex migrate:latest",
+    "db:rollback": "yarn knex migrate:rollback",
+    "db:create": "node ./db/createDb.js",
+    "db:drop": "node ./db/dropDb.js",
+    "server": "nodemon ./src/server/index.js",
+    "client": "parcel ./src/client/html -p 8080"
+  },
+  "author": "<jcentaur@student.42.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "convict": "^4.3.2",
+    "express": "^4.16.3",
+    "knex": "^0.15.2",
+    "lodash": "^4.17.10",
+    "nodemon": "^1.18.3",
+    "objection": "^1.2.2",
+    "pg": "^7.4.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
+    "transform-runtime": "^0.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint-config-prettier": "^3.0.1",
+    "prettier": "^1.14.2"
+  }
+}
